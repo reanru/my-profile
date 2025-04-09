@@ -48,7 +48,7 @@ export default function Index() {
                                     <img class="rounded-full object-cover h-full w-full" src={foto} alt="Default avatar" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="leading-9 lg:leading-12 text-2xl lg:text-3xl font-bold text-slate-800">Refandi Andika Runtu</span>
+                                    <span className="leading-9 lg:leading-12 text-2xl lg:text-3xl font-bold text-slate-800">Refandi Andika Runtu 1</span>
                                     <span className="text-lg font-semibold text-slate-600">Web Developer</span>
                                 </div>
                             </div>
