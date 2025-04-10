@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { 
     FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaQuoteRight,
@@ -38,6 +38,37 @@ export default function Index() {
         { image : realtimeChatImg, name: "Simple Realtime Chat", description : "This project is a simple real-time chat application that I developed as part of my learning journey. The main goal was to understand how real-time, bidirectional communication works using WebSocket (or other real-time technologies like Firebase/Socket.IO). Through this project, I explored managing chat state, building a modular component structure, and implementing a responsive and user-friendly interface." }
     ]
 
+    const [activeSection, setActiveSection] = useState('');
+
+    // Fungsi untuk menangani perubahan scroll
+    const handleScroll = () => {
+        const sections = document.querySelectorAll('.section');
+        let currentSection = '';
+        
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 120 && rect.bottom >= 0) {
+                currentSection = section.id;
+            }
+            // console.log('check ', section);
+        });
+
+        setActiveSection(currentSection);
+    };
+
+    useEffect(() => {
+        // Menambahkan event listener untuk scroll
+        window.addEventListener('scroll', handleScroll);
+        
+        // Membersihkan event listener saat komponen unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    
+    
+
     return (
         // <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800">
         <div className="relative bg-gray-50 min-w-[375px]">
@@ -66,10 +97,18 @@ export default function Index() {
 
                         <div className="hidden lg:block">
                             <ul className="list-none text-sm font-semibold uppercase">
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#about">About</a></li>
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#skills">Skills</a></li>
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#experience">Experience</a></li>
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#projects">Projects</a></li>
+                                <li className={"group flex items-center gap-2 h-10 w-min hover:text-blue-500 transition-all duration-300 "+(activeSection === "about" ? "text-blue-500":"text-blue-950")}>
+                                    <div className={"h-2 w-1 group-hover:h-6 rounded-full group-hover:bg-blue-500 transition-all duration-300 "+(activeSection === "about" ? "h-6 bg-blue-500":"bg-blue-950")}></div> <a href="#about">About</a>
+                                </li>
+                                <li className={"group flex items-center gap-2 h-10 w-min hover:text-blue-500 transition-all duration-300 "+(activeSection === "skills" ? "text-blue-500":"text-blue-950")}>
+                                    <div className={"h-2 w-1 group-hover:h-6 rounded-full group-hover:bg-blue-500 transition-all duration-300 "+(activeSection === "skills" ? "h-6 bg-blue-500":"bg-blue-950")}></div> <a href="#skills">Skills</a>
+                                </li>
+                                <li className={"group flex items-center gap-2 h-10 w-min hover:text-blue-500 transition-all duration-300 "+(activeSection === "experience" ? "text-blue-500":"text-blue-950")}>
+                                    <div className={"h-2 w-1 group-hover:h-6 rounded-full group-hover:bg-blue-500 transition-all duration-300 "+(activeSection === "experience" ? "h-6 bg-blue-500":"bg-blue-950")}></div> <a href="#experience">Experience</a>
+                                </li>
+                                <li className={"group flex items-center gap-2 h-10 w-min hover:text-blue-500 transition-all duration-300 "+(activeSection === "projects" ? "text-blue-500":"text-blue-950")}>
+                                    <div className={"h-2 w-1 group-hover:h-6 rounded-full group-hover:bg-blue-500 transition-all duration-300 "+(activeSection === "projects" ? "h-6 bg-blue-500":"bg-blue-950")}></div> <a href="#projects">Projects</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -86,7 +125,7 @@ export default function Index() {
                         </div>
 
                         <div className="space-y-20 pb-24 px-4">
-                            <div id="about" className="text-lg text-gray-900 space-y-4">
+                            <div id="about" className="section text-lg text-gray-900 space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">About</span>
@@ -114,7 +153,7 @@ export default function Index() {
 
                             </div>
 
-                            <div id="skills" className="space-y-4">
+                            <div id="skills" className="section space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">My Skills</span>
@@ -129,7 +168,7 @@ export default function Index() {
                                 </div>
                             </div>
                             
-                            <div id="experience" className="space-y-4">
+                            <div id="experience" className="section space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">Work Experience</span>
@@ -168,7 +207,7 @@ export default function Index() {
                                 </div>
                             </div>
 
-                            <div id="projects" className="space-y-4">
+                            <div id="projects" className="section space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">Projects Created</span>
