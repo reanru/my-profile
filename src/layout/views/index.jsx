@@ -66,10 +66,10 @@ export default function Index() {
 
                         <div className="hidden lg:block">
                             <ul className="list-none text-sm font-semibold uppercase">
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <span>About</span></li>
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <span>Skills</span></li>
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <span>Experience</span></li>
-                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <span>Projects</span></li>
+                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#about">About</a></li>
+                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#skills">Skills</a></li>
+                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#experience">Experience</a></li>
+                                <li className="group flex items-center gap-2 h-10 w-min text-blue-950 hover:text-blue-500 transition-all duration-300"><div className="h-2 w-1 group-hover:h-6 rounded-full bg-blue-950 group-hover:bg-blue-500 transition-all duration-300"></div> <a href="#projects">Projects</a></li>
                             </ul>
                         </div>
 
@@ -86,7 +86,7 @@ export default function Index() {
                         </div>
 
                         <div className="space-y-20 pb-24 px-4">
-                            <div className="text-lg text-gray-900 space-y-4">
+                            <div id="about" className="text-lg text-gray-900 space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">About</span>
@@ -114,7 +114,7 @@ export default function Index() {
 
                             </div>
 
-                            <div className="space-y-4">
+                            <div id="skills" className="space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">My Skills</span>
@@ -129,7 +129,7 @@ export default function Index() {
                                 </div>
                             </div>
                             
-                            <div className="space-y-4">
+                            <div id="experience" className="space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">Work Experience</span>
@@ -168,7 +168,7 @@ export default function Index() {
                                 </div>
                             </div>
 
-                            <div className="space-y-4">
+                            <div id="projects" className="space-y-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-4 w-1 rounded-full bg-blue-950"></div>
                                     <span className="text-lg font-medium text-blue-950">Projects Created</span>
