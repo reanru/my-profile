@@ -11,6 +11,8 @@ import { SiRedux, SiPostman } from "react-icons/si";
 
 import foto from "../../assets/foto.jpg";
 import gamingShopImg from "../../assets/gaming-shop.jpg";
+import weddingInvImg from "../../assets/wedding-invitation.jpg";
+import realtimeChatImg from "../../assets/realtime-chat.jpg";
 // import { data } from "react-router-dom";
 
 export default function Index() {
@@ -31,8 +33,9 @@ export default function Index() {
     ]
 
     const projects = [
-        { image : gamingShopImg, name: "Gaming Shop", description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." },
-        { image : gamingShopImg, name: "Gaming Shop", description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." }
+        { image : gamingShopImg, name: "Gaming Shop", description : "This static website was developed using a free template from <strong>www.templatemo.com</strong> as part of my learning process. The main focus of this project was to improve my skills in implementing precise layouts and building responsive, optimized designs across various devices, including mobile and desktop." },
+        { image : weddingInvImg, name: "Simple Wedding Invitation", description : "This website was developed based on several design references I found online (specific sources were not documented). I customized and modified various design elements to better align with the component structure I implemented. The main focus of this project was to sharpen my skills in implementing precise layouts and building responsive, optimized designs across different devices, including mobile and desktop." },
+        { image : realtimeChatImg, name: "Simple Realtime Chat", description : "This project is a simple real-time chat application that I developed as part of my learning journey. The main goal was to understand how real-time, bidirectional communication works using WebSocket (or other real-time technologies like Firebase/Socket.IO). Through this project, I explored managing chat state, building a modular component structure, and implementing a responsive and user-friendly interface." }
     ]
 
     return (
@@ -181,7 +184,7 @@ export default function Index() {
 
                                             <div className="flex flex-col">
                                                 <span className="font-semibold text-blue-950">{data.name}</span>
-                                                <span className="text-sm text-gray-500">{data.description}</span>
+                                                <span className="text-sm text-gray-500" dangerouslySetInnerHTML={{__html : data.description}} />
                                             </div>
                                         </div>
                                     )) }
