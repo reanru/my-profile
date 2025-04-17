@@ -3,8 +3,11 @@ import React from 'react'
 import { 
     FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaQuoteRight,
 } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
+import { FiArrowUpRight } from "react-icons/fi";
 
 import foto from "../../../assets/foto.jpg";
+import resume from "../../../../resume.pdf";
 
 import Navbar from "../parts/navbar";
 import SectionAbout from "../parts/about";
@@ -41,13 +44,19 @@ export default function Index() {
                     </header>
 
                     <main className="lg:w-[52%]">
-                        <div className="sticky top-0 bg-gray-50 flex items-center h-24">
+                        <div className="sticky top-0 bg-gray-50 flex items-center justify-between h-24">
                             <ul className="flex gap-4">
                                 <li><a href="https://github.com/reanru" target="_blank"><FaGithub className="w-7 h-7 text-blue-950 hover:text-blue-600 transition-all duration-300" /></a></li>
                                 <li><a href="https://linkedin.com/in/refandi-andika-runtu-59b67a1a5" target="_blank"><FaLinkedin className="w-7 h-7 text-blue-950 hover:text-blue-600 transition-all duration-300" /></a></li>
                                 <li><a href="https://www.instagram.com/_anrru" target="_blank"><FaInstagram className="w-7 h-7 text-blue-950 hover:text-blue-600 transition-all duration-300" /></a></li>
                                 <li><a href="https://www.facebook.com/share/162NKnEpbA/" target="_blank"><FaFacebook className="w-7 h-7 text-blue-950 hover:text-blue-600 transition-all duration-300" /></a></li>
                             </ul>
+
+                            {/* <button className="px-2 py-1 bg-blue-400 rounded-2xl">Full Resume</button> */}
+                            <a href={resume} target="_blank" className="group flex items-center font-semibold text-blue-500 px-3 py-1 hover:text-white hover:bg-blue-400 rounded-2xl transition-all duration-300">
+                                Full Resume <FiArrowUpRight className="group-hover:mb-1 group-hover: transition-all duration-300" />
+                            </a>
+
                         </div>
 
                         <div className="space-y-20 pb-24 px-4">
