@@ -24,6 +24,16 @@ export default function Experiences() {
                     <li>Delivered end-user training on content management systems allowing staff to make easy updates and maintenance to website without developer assistance.</li>
                 </ul>
             </div>
+            <div className="bg-white p-5 flex flex-col rounded-2xl shadow-lg hover:shadow-blue-300 hover:cursor-pointer transition-all duration-150">
+                <span className="text-lg font-semibold text-blue-950">Coding Bee Teacher - PT. Kolaborasi Edukasi Indonesia (2025 - Current)</span>
+                <span className="text-md font-semibold text-gray-500">Manado, Sulawesi Utara, Indonesia</span>
+
+                <ul class="ml-5 mt-4 list-disc text-md text-gray-800">
+                    <li>Teach fundamental programming concepts using Scratch, Python, and other tools.</li>
+                    <li>Create interactive learning materials and engaging coding projects.</li>
+                    <li>Evaluate student progress and provide guidance to support their learning.</li>
+                </ul>
+            </div>
         </div>
     )
 }

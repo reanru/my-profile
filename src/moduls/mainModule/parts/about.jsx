@@ -10,22 +10,27 @@ export default function About() {
 
             <div>
                 <p>
-                    I graduated in 2021 from Manado State University with a degree in Informatics Engineering. 
-                    Since college, I’ve had a strong interest in web programming and have continued to develop my skills in this area.
+                    I graduated in 2021 from Manado State University with a degree in Informatics Engineering. Since college, I’ve had a strong interest in web programming and have continued to develop my skills in this area.
                 </p>
 
                 <br />
 
                 <p>
-                    My career as a web developer began with learning Laravel, along with the basics of HTML, CSS, JavaScript, and PHP. 
-                    I applied these technologies in several projects, including my final project for graduation.
+                    My career as a web developer began with learning Laravel, along with the basics of HTML, CSS, JavaScript, and PHP. I applied these technologies in several projects, including my final project for my degree.
                 </p>
 
                 <br />
                 
                 <p>
-                    Later on, I started working with React.js in a professional environment, and it has become my primary tool for frontend development to this day. In addition to my full-time work, I also take on small freelance projects and personal side projects to further sharpen my skills and broaden my experience.
+                    Later on, I started working with React.js in a professional environment, and it has become my primary tool for frontend development ever since. In addition to my full-time work, I also take on small freelance projects and personal side projects to further sharpen my skills and broaden my experience.
                 </p>
+
+                <br />
+
+                <p>
+                    Alongside continuing to develop my skills in web development, I have also been working as a coding instructor since May 2025. This experience has further strengthened my ability to explain programming concepts in a simple and accessible way.
+                </p>
+
             </div>
 
         </div>
